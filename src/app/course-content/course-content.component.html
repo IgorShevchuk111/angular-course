@@ -1,0 +1,3 @@
+<mat-card *ngFor="let c of contentService.contents; let i=index">
+    <mat-card-title [routerLink]="['/content',i]"><a >{{c}}</a></mat-card-title>
+</mat-card>

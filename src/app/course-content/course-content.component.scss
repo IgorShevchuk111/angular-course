@@ -1,0 +1,17 @@
+mat-card {
+    width: 80%;
+    margin: 10px auto 10px;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+mat-card:hover {
+    background: #ededed;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
