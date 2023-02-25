@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { CourseContentComponent } from './course-content/course-content.component';
-import { BindingImgComponent } from './binding-img/binding-img.component';
-import { ContentTitleComponent } from './content-title/content-title.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { BindingImgComponent } from './components/binding-img/binding-img.component';
+import { ContentTitleComponent } from './components/content-title/content-title.component';
+import { EventBindingComponent } from './components/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseContentComponent,
+    HomePageComponent,
     BindingImgComponent,
-    ContentTitleComponent
+    ContentTitleComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

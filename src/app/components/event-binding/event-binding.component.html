@@ -1,0 +1,17 @@
+<div class="link-button">
+    <a  mat-button [routerLink]="['/']"><h1>Back</h1></a>
+</div>
+
+<mat-form-field >
+    <mat-label>Enter text</mat-label>
+    <input matInput type="text" 
+     (input)="onInputValue($event)"
+     (keyup.enter)="onKeyup($event)"
+     (blur)="onBluer(inputV.value)"
+     #inputV
+     >
+</mat-form-field>
+
+<p>{{inputValue}}</p>
+
+
