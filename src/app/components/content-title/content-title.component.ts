@@ -53,6 +53,9 @@ export class ContentTitleComponent implements OnInit {
       case 7: 
         this.mov = "NgFor";
       break;
+      case 8: 
+        this.mov = "Pipes";
+      break;
 
       default:
         this.mov = "/";

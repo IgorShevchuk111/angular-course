@@ -7,6 +7,7 @@ import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-n
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:  'ShowNgIfElse', component: ShowNgIfElseComponent},
   {path:  'NgSwitch', component: NgSwitchComponent},
   {path:  'NgFor', component: NgForComponent},
+  {path:  'Pipes', component: PipesComponent},
 ]
 
 @NgModule({

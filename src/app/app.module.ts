@@ -16,6 +16,7 @@ import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-n
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
     ShowNgIfElseComponent,
     NgSwitchComponent,
     NgForComponent,
+    PipesComponent,
   ],
   imports: [
     BrowserModule,
