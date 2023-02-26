@@ -10,7 +10,7 @@ export class ContentService {
   constructor() { }
 
    contents = [
-    'Binding Img', 'Event binding','2 Way binnding'
+    'Binding Img', 'Event binding','2 Way binnding','Directive ngStyle'
   ]
 
   getTitleByi(i: number) {

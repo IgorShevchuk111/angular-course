@@ -36,7 +36,10 @@ export class ContentTitleComponent implements OnInit {
         this.mov = "EventBinding";
       break;
       case 2: 
-        this.mov = "2way-binding";
+        this.mov = "TwoWayBinding";
+      break;
+      case 3: 
+        this.mov = "DirectiveNgStyle";
       break;
 
       default:

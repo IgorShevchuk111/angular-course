@@ -9,6 +9,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BindingImgComponent } from './components/binding-img/binding-img.component';
 import { ContentTitleComponent } from './components/content-title/content-title.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,17 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
     HomePageComponent,
     BindingImgComponent,
     ContentTitleComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayBindingComponent,
+    DirectiveNgStyleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
