@@ -12,6 +12,7 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
+import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DirectiveNgStyleComponent } from './components/directive-ng-style/direc
     EventBindingComponent,
     TwoWayBindingComponent,
     DirectiveNgStyleComponent,
+    DynamicNgClassComponent,
   ],
   imports: [
     BrowserModule,
