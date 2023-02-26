@@ -56,6 +56,9 @@ export class ContentTitleComponent implements OnInit {
       case 8: 
         this.mov = "Pipes";
       break;
+      case 9: 
+        this.mov = "PostForm";
+      break;
 
       default:
         this.mov = "/";
