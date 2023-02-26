@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
 import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-e
     DirectiveNgStyleComponent,
     DynamicNgClassComponent,
     ShowNgIfElseComponent,
+    NgSwitchComponent,
   ],
   imports: [
     BrowserModule,

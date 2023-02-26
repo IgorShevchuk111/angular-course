@@ -5,6 +5,7 @@ import { ContentTitleComponent } from './components/content-title/content-title.
 import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
 import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:  'DirectiveNgStyle', component: DirectiveNgStyleComponent},
   {path:  'DynamicNgClass', component: DynamicNgClassComponent},
   {path:  'ShowNgIfElse', component: ShowNgIfElseComponent},
+  {path:  'NgSwitch', component: NgSwitchComponent},
 ]
 
 @NgModule({

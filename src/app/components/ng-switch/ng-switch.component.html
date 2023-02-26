@@ -1,0 +1,19 @@
+<div class="link-button">
+    <a  mat-button [routerLink]="['/']"><h1>Back</h1></a>
+</div>
+
+<div [ngSwitch]="toggle">
+    <h2 *ngSwitchCase="true">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, sequi.
+    </h2>
+
+    <h2 *ngSwitchCase="false"> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, totam dolorum 
+        voluptatibus sunt aut nulla.
+    </h2>
+</div>
+
+<div class="link-button">
+    <a  mat-button (click)="toggle = !toggle"><h1>toggle</h1></a>
+</div>
+
