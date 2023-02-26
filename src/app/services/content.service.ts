@@ -10,7 +10,8 @@ export class ContentService {
   constructor() { }
 
    contents = [
-    'Binding Img', 'Event binding','2 Way binnding','Directive ngStyle','Dynamic ngClass'
+    'Binding Img', 'Event binding','2 Way binnding','Directive ngStyle','Dynamic ngClass',
+    'Show an element using ngIf else'
   ]
 
   getTitleByi(i: number) {

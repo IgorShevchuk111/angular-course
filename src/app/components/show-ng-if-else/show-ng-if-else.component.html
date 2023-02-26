@@ -1,0 +1,27 @@
+<div class="link-button">
+    <a  mat-button [routerLink]="['/']"><h1>Back</h1></a>
+</div>
+
+<h2 *ngIf="toggle; else show"
+    [ngClass]="{
+         red: toggle,
+         blue: !toggle
+    }">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, sequi.
+</h2>
+
+<ng-template #show>
+    <h2
+        [class.red]="toggle" 
+        [class.blue]="!toggle"> 
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, totam dolorum 
+            voluptatibus sunt aut nulla.
+    </h2>
+</ng-template>
+
+
+<div class="link-button">
+    <a  mat-button (click)="toggle = !toggle"><h1>toggle</h1></a>
+</div>
+
+

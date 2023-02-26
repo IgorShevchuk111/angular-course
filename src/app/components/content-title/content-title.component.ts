@@ -44,6 +44,9 @@ export class ContentTitleComponent implements OnInit {
       case 4: 
         this.mov = "DynamicNgClass";
       break;
+      case 5: 
+        this.mov = "ShowNgIfElse";
+      break;
 
       default:
         this.mov = "/";

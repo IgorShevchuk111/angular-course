@@ -13,6 +13,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
 import { FormsModule } from '@angular/forms';
 import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
 import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
+import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-n
     TwoWayBindingComponent,
     DirectiveNgStyleComponent,
     DynamicNgClassComponent,
+    ShowNgIfElseComponent,
   ],
   imports: [
     BrowserModule,
