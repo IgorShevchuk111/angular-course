@@ -1,0 +1,21 @@
+<div class="link-button">
+    <a  mat-button [routerLink]="['/']"><h1>Back</h1></a>
+</div>
+
+<ul *ngFor="let n of aray">
+    <li>{{n}}</li>
+</ul>
+
+<hr>
+
+<ul >
+    <li *ngFor="let post of objs">
+        <p>{{post.title}} <b>{{post.author}}</b></p> 
+        <ul >
+            <li *ngFor="let comment  of post.comments">
+                <small>{{comment.name}}</small>
+                <p>{{comment.text}}</p>
+            </li>
+        </ul>
+    </li>
+</ul>

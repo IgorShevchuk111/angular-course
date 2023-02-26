@@ -50,6 +50,9 @@ export class ContentTitleComponent implements OnInit {
       case 6: 
         this.mov = "NgSwitch";
       break;
+      case 7: 
+        this.mov = "NgFor";
+      break;
 
       default:
         this.mov = "/";

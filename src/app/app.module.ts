@@ -15,6 +15,7 @@ import { DirectiveNgStyleComponent } from './components/directive-ng-style/direc
 import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
+import { NgForComponent } from './components/ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
     DynamicNgClassComponent,
     ShowNgIfElseComponent,
     NgSwitchComponent,
+    NgForComponent,
   ],
   imports: [
     BrowserModule,
