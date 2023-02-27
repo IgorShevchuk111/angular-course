@@ -17,7 +17,9 @@ import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-e
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     NgSwitchComponent,
     NgForComponent,
     PipesComponent,
+    CreatePostsComponent,
     PostFormComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

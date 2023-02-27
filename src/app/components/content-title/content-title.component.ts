@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ContentService } from '../../services/content.service';
+import { CreatePostsComponent } from '../create-posts/create-posts.component';
+import { PostFormComponent } from '../post-form/post-form.component';
 
 @Component({
   selector: 'app-content-title',
@@ -22,6 +24,7 @@ export class ContentTitleComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) =>{
      const title = this.contentService.getTitleByi(params['i'])
+     
      this.title = title;
      this.i = params['i']
     } )
@@ -65,6 +68,7 @@ export class ContentTitleComponent implements OnInit {
       break;
     }
     this.router.navigate([this.mov])
+    
   }
 
 }
