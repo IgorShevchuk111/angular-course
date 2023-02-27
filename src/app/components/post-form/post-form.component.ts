@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -13,6 +13,10 @@ export interface Post {
   styleUrls: ['./post-form.component.scss']
 })
 export class PostFormComponent implements OnInit {
+
+  // {static: true} if OnInit
+
+  @ViewChild('inputTitle', {static: false}) inputRef: ElementRef
 
   title = ''
   text = ''
@@ -38,4 +42,11 @@ export class PostFormComponent implements OnInit {
     this.router.navigate(['Post'],{relativeTo:this.route})
     }
   }
+
+  onFocus(){
+    console.log('d',this.inputRef);
+    
+    this.inputRef.nativeElement.focus()
+  }
+
 }

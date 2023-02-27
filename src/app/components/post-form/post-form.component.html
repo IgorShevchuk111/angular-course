@@ -1,8 +1,8 @@
 <h1>Create Post</h1>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" >
     <mat-label>Title...</mat-label>
-    <input matInput [(ngModel)]="title" >
+    <input matInput [(ngModel)]="title" #inputTitle>
 </mat-form-field>
 
 <mat-form-field appearance="fill">
@@ -13,6 +13,7 @@
 <div class="buttons">
     <button mat-flat-button color="primary"><a style="color: white;" [routerLink]="['/']">Back</a></button>
     <button mat-flat-button color="primary" (click)="onClick()">Create post</button>
+    <button mat-flat-button color="primary" (click)="onFocus()">Focus</button>
 </div>
 
 <hr>
