@@ -11,7 +11,7 @@ export class PostsService {
   constructor() {}
 
   addPost(post: Post){
-    this.posts.unshift(post)
+    this.posts.unshift(post);
     console.log('f',this.posts);
     
   }
