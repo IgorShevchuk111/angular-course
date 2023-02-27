@@ -1,6 +1,10 @@
 <mat-card *ngFor="let p of postsService.posts">  
+    <span class="material-symbols-outlined" (click)="removePost(p.title,p.text)">
+        close
+    </span>
     <mat-card-header>
         <mat-card-title>{{p.title}}</mat-card-title>
     </mat-card-header>
     <p>{{p.text}}</p>
+    
 </mat-card>

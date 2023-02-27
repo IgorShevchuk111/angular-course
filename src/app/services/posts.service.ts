@@ -15,4 +15,9 @@ export class PostsService {
     console.log('f',this.posts);
     
   }
+
+  removePost(title:string,text:string){
+    this.posts = this.posts.filter(p => p.title !== title )
+    this.posts = this.posts.filter(p => p.text !== text )
+  }
 }

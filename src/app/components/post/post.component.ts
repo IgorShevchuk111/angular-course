@@ -12,6 +12,10 @@ export class PostComponent  {
     public postsService: PostsService
   ) { }
 
+  removePost(title:string,  text:string){
+    this.postsService.removePost(title,text)
+  }
+
 
 
 }
