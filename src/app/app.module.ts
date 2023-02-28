@@ -21,6 +21,7 @@ import { CreatePostsComponent } from './components/create-posts/create-posts.com
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
 import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
+import { DAddClassDirective } from './directive/d-add-class.directive';
 
 
 
@@ -41,7 +42,8 @@ import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
     CreatePostsComponent,
     PostFormComponent,
     PostComponent,
-    DStyleMouseDirective
+    DStyleMouseDirective,
+    DAddClassDirective
   ],
   imports: [
     BrowserModule,
