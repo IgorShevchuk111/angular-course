@@ -22,6 +22,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
 import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
 import { DAddClassDirective } from './directive/d-add-class.directive';
+import { DHideElementDirective } from './directive/d-hide-element.directive';
 
 
 
@@ -43,7 +44,9 @@ import { DAddClassDirective } from './directive/d-add-class.directive';
     PostFormComponent,
     PostComponent,
     DStyleMouseDirective,
-    DAddClassDirective
+    DAddClassDirective,
+    DHideElementDirective,
+    DHideElementDirective
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectiveNgStyleComponent implements OnInit {
 
   toggle = false
+  hide = true
 
   constructor() { }
 

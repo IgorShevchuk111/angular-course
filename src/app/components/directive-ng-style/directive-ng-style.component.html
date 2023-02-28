@@ -32,3 +32,11 @@
         Click me !
     </p>
 </mat-card>
+
+<mat-card *appDHideElement="hide">
+    <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fuga sunt explicabo
+         repudiandae odio soluta? Quae dolor alias earum quos!
+    </p>
+</mat-card>
+<button mat-raised-button (click)="hide = !hide">toggle</button>
