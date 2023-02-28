@@ -20,6 +20,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
+import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { PostComponent } from './components/post/post.component';
     PipesComponent,
     CreatePostsComponent,
     PostFormComponent,
-    PostComponent
+    PostComponent,
+    DStyleMouseDirective
   ],
   imports: [
     BrowserModule,

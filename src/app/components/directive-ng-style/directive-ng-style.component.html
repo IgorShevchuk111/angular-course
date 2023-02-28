@@ -3,8 +3,9 @@
 </div>
 
 <div [ngStyle]="{
-    width: '400px',
-    height: '400px',
+    width: '200px',
+    height: '200px',
+    margin:  '0 auto 20px',
     border: '1px solid #ccc',
     borderRadius: '5px',
     background: toggle? 'red' : 'blue'
@@ -15,3 +16,13 @@
 <div class="link-button">
     <a  mat-button (click)="toggle = !toggle"><h1>toggle</h1></a>
 </div>
+
+<hr>
+
+<h1>Directive mouse enter mouse leave</h1>
+
+<mat-card appDStyleMouse [dStyle]="{color: 'blue', fontWeight: 'bold'}">
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, officia.
+    </p>
+</mat-card>
