@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { ContentService } from '../../services/content.service';
-import { CreatePostsComponent } from '../create-posts/create-posts.component';
-import { PostFormComponent } from '../post-form/post-form.component';
+
 
 @Component({
   selector: 'app-content-title',

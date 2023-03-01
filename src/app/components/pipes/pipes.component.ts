@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pipes',
@@ -13,6 +14,7 @@ export class PipesComponent implements OnInit {
 
   n: number = Math.E
   number = 0.42
+  
 
   obj = {
       a:1,
@@ -28,7 +30,23 @@ export class PipesComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit(): void {
+   
   }
+
+  p: Promise<string> = new Promise<string>( resolve => {
+    setInterval(() => {
+      resolve('Promise Risolved')
+    }, 5000);
+  })
+
+  date$: Observable<Date>= new Observable<Date>(obs =>  {
+    setInterval(() => {
+     obs.next(new Date)
+    }, 1000);
+  })
+
+  
 
 }
