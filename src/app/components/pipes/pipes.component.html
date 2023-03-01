@@ -2,6 +2,42 @@
     <a  mat-button [routerLink]="['/']"><h1>Back</h1></a>
 </div>
 
+<h3>Pipe Date</h3>
+<br>    
 <h3>
     {{now | date:'short' | uppercase | lowercase}}
 </h3>
+
+<h3>{{now | date:'d,MMM, y, HH:mm:ss a'}}</h3>
+<br>    
+<hr>
+
+<h3>Pipe String</h3>
+<br>
+<h3>{{str | titlecase | slice:0:5}}</h3>
+<h3>{{str | titlecase | slice:5}}</h3>
+<h3>{{str | titlecase | slice:2:-7}}</h3>
+
+<hr>
+
+<h3>Pipe Number</h3>
+<br>
+<h3>{{n}}</h3>
+<h3>{{n | number}}</h3>
+<h3>{{n | number:'2.0-0'}}</h3>
+<h3>{{n | number:'1.1-2'}}</h3>
+<br>
+<hr>
+
+<h3>Pipe Json</h3>
+
+<h3><pre>{{obj | json }}</pre></h3>
+
+<hr>
+<br>
+
+<h3>Pipe Currency, Percent</h3>
+<h3>{{number | currency}}</h3>
+<h3>{{number | percent}}</h3>
+
+Pipe: Date, String, Number, Json
