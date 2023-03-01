@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Post } from '../post-form/post-form.component';
 
 @Component({
   selector: 'app-pipes',
@@ -7,6 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./pipes.component.scss']
 })
 export class PipesComponent implements OnInit {
+
+  search: string = ''
+  searchField: string = 'title'
 
   now = new Date()
 
@@ -27,6 +31,12 @@ export class PipesComponent implements OnInit {
           }
       }
     }
+
+    posts = [
+      {title: 'Beer', text: 'Самое лучшее пиво в мире'},
+      {title: 'Bread', text: 'The best bread in the world'},
+      {title: 'Javascript', text: 'The best language in the world'},
+    ]
 
   constructor() { }
 

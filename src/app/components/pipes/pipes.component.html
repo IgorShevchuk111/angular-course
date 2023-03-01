@@ -2,6 +2,25 @@
     <button mat-raised-button color="primary"><a [routerLink]="['/']"> Back</a></button>
 </div>
 
+<mat-form-field>
+    <mat-label>Search...</mat-label>
+    <input matInput placeholder="Enter text..." [(ngModel)]="search">
+</mat-form-field>
+
+<div class="search-buttons">
+    <button mat-raised-button (click)="searchField = 'title'">Search Title</button>
+    <button mat-raised-button (click)="searchField = 'text'">Search Text</button>
+</div>
+
+
+<mat-card *ngFor="let p of posts | filter:search:searchField">
+    <h1>{{p.title}}</h1>
+    <h3>{{p.text}}</h3>
+</mat-card>
+<br>
+<hr>
+<br>
+
 <div class="grid">
     <div>
         <h1>Pipe Date</h1>

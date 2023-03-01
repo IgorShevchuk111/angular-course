@@ -23,6 +23,7 @@ import { PostComponent } from './components/post/post.component';
 import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
 import { DAddClassDirective } from './directive/d-add-class.directive';
 import { DHideElementDirective } from './directive/d-hide-element.directive';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -46,7 +47,8 @@ import { DHideElementDirective } from './directive/d-hide-element.directive';
     DStyleMouseDirective,
     DAddClassDirective,
     DHideElementDirective,
-    DHideElementDirective
+    DHideElementDirective,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
