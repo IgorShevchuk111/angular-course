@@ -62,6 +62,9 @@ export class ContentTitleComponent implements OnInit {
       case 9: 
         this.mov = "PostForm";
       break;
+      case 10: 
+        this.mov = "FormsAndValidation";
+      break;
 
       default:
         this.mov = "/";

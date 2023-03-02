@@ -10,7 +10,7 @@ import { BindingImgComponent } from './components/binding-img/binding-img.compon
 import { ContentTitleComponent } from './components/content-title/content-title.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectiveNgStyleComponent } from './components/directive-ng-style/directive-ng-style.component';
 import { DynamicNgClassComponent } from './components/dynamic-ng-class/dynamic-ng-class.component';
 import { ShowNgIfElseComponent } from './components/show-ng-if-else/show-ng-if-else.component';
@@ -24,6 +24,7 @@ import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
 import { DAddClassDirective } from './directive/d-add-class.directive';
 import { DHideElementDirective } from './directive/d-hide-element.directive';
 import { FilterPipe } from './pipes/filter.pipe';
+import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 
 
 
@@ -48,7 +49,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     DAddClassDirective,
     DHideElementDirective,
     DHideElementDirective,
-    FilterPipe
+    FilterPipe,
+    FormsAndValidationComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

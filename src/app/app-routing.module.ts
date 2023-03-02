@@ -14,6 +14,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
 import { HomePageComponent } from './home-page/home-page.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
+import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:  'PostForm', component: PostFormComponent,children: [
     {path:  'Post', component: PostComponent}
   ]},
+  {path:  'FormsAndValidation', component: FormsAndValidationComponent},
 ]
 
 @NgModule({

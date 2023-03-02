@@ -1,0 +1,19 @@
+<mat-card>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <h1>Angular Form</h1>
+        <mat-card class="card">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="Enter Email..." formControlName="email" required>
+                <mat-error *ngIf="form.get('email')?.invalid">{{getErrorMessageEmail()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput placeholder="Enter password..." formControlName="password" required>
+                <mat-error *ngIf="form.get('email')invalid">{{getErrorMessagePassword()}}</mat-error>
+            </mat-form-field>
+        </mat-card>
+        <button mat-flat-button color="primary" type="submit">Submit</button>
+    </form>
+</mat-card>
+
