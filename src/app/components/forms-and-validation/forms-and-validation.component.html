@@ -6,15 +6,43 @@
                 <mat-label>Enter your email</mat-label>
                 <input matInput placeholder="Enter Email..." formControlName="email" required>
             </mat-form-field>
+
             <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
                 {{getErrorMessageEmail()}}
             </div>
+
             <mat-form-field appearance="fill">
                 <mat-label>Enter your password</mat-label>
                 <input matInput placeholder="Enter password..." formControlName="password" required>
                 <mat-error *ngIf="form.get('email')invalid">{{getErrorMessagePassword()}}</mat-error>
             </mat-form-field>
+
+            <mat-card>
+                <h1>Address</h1>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Country</mat-label>
+                    <mat-select>
+                        <mat-option value="uk">England</mat-option>
+                        <mat-option value="ua">Ukraine</mat-option>
+                        <mat-option value="pl">Poland</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input matInput type="text">
+                </mat-form-field>
+                <button mat-flat-button color="primary">Choose Capital</button>
+            </mat-card>
+
+            <mat-card>
+                <h1>Skills</h1>
+                <button mat-flat-button color="primary">add skills</button>
+                <mat-form-field appearance="fill">
+                    <mat-label>Your skill...</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </mat-card>
+            <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">Send Form</button>
         </mat-card>
-        <button mat-flat-button color="primary" type="submit">Submit</button>
     </form>
 </mat-card>

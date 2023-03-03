@@ -32,9 +32,6 @@ submit() {
     })
   }
 
- 
-      
-
   getErrorMessageEmail() {
     if (this.form.get('email')?.hasError('required')) {
       return 'You must enter a email';
@@ -48,5 +45,4 @@ submit() {
     }
     return this.form.get('password')?.hasError('minlength') ? 'fdf' : '';
   }
-
 }
