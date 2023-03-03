@@ -9,7 +9,6 @@
             <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
                 {{getErrorMessageEmail()}}
             </div>
-
             <mat-form-field appearance="fill">
                 <mat-label>Enter your password</mat-label>
                 <input matInput placeholder="Enter password..." formControlName="password" required>
