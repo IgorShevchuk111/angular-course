@@ -6,7 +6,6 @@
                 <mat-label>Enter your email</mat-label>
                 <input matInput placeholder="Enter Email..." formControlName="email" required>
             </mat-form-field>
-
             <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
                 {{getErrorMessageEmail()}}
             </div>
