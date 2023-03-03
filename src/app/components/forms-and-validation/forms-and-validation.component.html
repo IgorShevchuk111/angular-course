@@ -1,47 +1,57 @@
 <mat-card>
     <form [formGroup]="form" (ngSubmit)="submit()">
+
         <h1>Angular Form</h1>
+        <!-- ANGULAR FORM -->
         <mat-card class="card">
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="Enter Email..." formControlName="email" required>
-            </mat-form-field>
+            <!-- EMAIL PASSWORD FORM -->
+            <div class="container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="Enter Email..." formControlName="email" required>
+                </mat-form-field>
+                <!-- SHOW ERRORS EMAIL -->
+                <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                    {{getErrorMessageEmail()}}
+                </div>
 
-            <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
-                {{getErrorMessageEmail()}}
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput placeholder="Enter password..." formControlName="password" required>
+                    <mat-error *ngIf="form.get('email')invalid">{{getErrorMessagePassword()}}</mat-error>
+                </mat-form-field>
             </div>
-
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your password</mat-label>
-                <input matInput placeholder="Enter password..." formControlName="password" required>
-                <mat-error *ngIf="form.get('email')invalid">{{getErrorMessagePassword()}}</mat-error>
-            </mat-form-field>
-
-            <mat-card>
-                <h1>Address</h1>
-
-                <mat-form-field appearance="fill">
-                    <mat-label>Country</mat-label>
-                    <mat-select>
-                        <mat-option value="uk">England</mat-option>
-                        <mat-option value="ua">Ukraine</mat-option>
-                        <mat-option value="pl">Poland</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-form-field appearance="fill">
-                    <input matInput type="text">
-                </mat-form-field>
-                <button mat-flat-button color="primary">Choose Capital</button>
-            </mat-card>
-
-            <mat-card>
-                <h1>Skills</h1>
-                <button mat-flat-button color="primary">add skills</button>
-                <mat-form-field appearance="fill">
-                    <mat-label>Your skill...</mat-label>
-                    <input matInput>
-                </mat-form-field>
-            </mat-card>
+            <!-- ADDRESS GROUP -->
+            <div class="container">
+                <mat-card formGroupName="address">
+                    <h1>Address</h1>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <mat-select formControlName="country">
+                            <mat-option value="uk">England</mat-option>
+                            <mat-option value="ua">Ukraine</mat-option>
+                            <mat-option value="pl">Poland</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>City</mat-label>
+                        <input matInput placeholder="city" value="s" formControlName="city" required>
+                    </mat-form-field>
+                    <button mat-flat-button color="primary" type="button" (click)="ChooseCapital()">
+                        Choose Capital</button>
+                </mat-card>
+            </div>
+            <!-- SKILLS ARRAY -->
+            <div class="container">
+                <mat-card formGroupName="skills">
+                    <h1>Skills</h1>
+                    <button mat-flat-button type="button" color="primary" (click)="addSkills()">add skills</button>
+                    <mat-form-field appearance="fill" *ngFor="let control of getControls(); let i = index ">
+                        <input matInput placeholder="Enter your skill.." [formControlName]="i">
+                    </mat-form-field>
+                </mat-card>
+            </div>
+            <!-- SUBMIT BUTTON -->
             <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">Send Form</button>
         </mat-card>
     </form>
