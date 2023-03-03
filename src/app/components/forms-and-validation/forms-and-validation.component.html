@@ -5,8 +5,12 @@
             <mat-form-field appearance="fill">
                 <mat-label>Enter your email</mat-label>
                 <input matInput placeholder="Enter Email..." formControlName="email" required>
-                <mat-error *ngIf="form.get('email')?.invalid">{{getErrorMessageEmail()}}</mat-error>
             </mat-form-field>
+
+            <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                {{getErrorMessageEmail()}}
+            </div>
+
             <mat-form-field appearance="fill">
                 <mat-label>Enter your password</mat-label>
                 <input matInput placeholder="Enter password..." formControlName="password" required>
@@ -17,3 +21,4 @@
     </form>
 </mat-card>
 
+<pre>{{this.form.get('email')?.errors | json}}</pre>
