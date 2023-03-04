@@ -4,6 +4,6 @@
         <input matInput [(ngModel)]="search">
     </div>
 </div>
-<mat-card *ngFor="let c of contentService.contents | filterArray:search;  let i=index">
+<mat-card *ngFor="let c of contentService.contents | filterArray:search; let i=index">
     <mat-card-title [routerLink]="['/content',i]"><a>{{c}}</a></mat-card-title>
 </mat-card>
