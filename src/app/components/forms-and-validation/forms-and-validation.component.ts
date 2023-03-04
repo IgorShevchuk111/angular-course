@@ -34,6 +34,8 @@ export class FormsAndValidationComponent implements OnInit {
   getErrorMessageEmail() {
     if (this.form.get('email')?.hasError('required')) {
       return 'You must enter a email';
+    } else if (this.form.get('email')?.hasError('restrictedEmail')){
+      return `This email ${this.form.get('email')?.value } restricted`;
     }
     return this.form.get('email')?.hasError('email') ? 'Not a valid email' : '';
   }
