@@ -1,3 +1,10 @@
+<div class="search-containet">
+    <div class="input">
+        <button><mat-icon class="material-symbols-outlined" matPrefix>search</mat-icon></button>
+        <input matInput>
+    </div>
+</div>
 <mat-card *ngFor="let c of contentService.contents; let i=index">
-    <mat-card-title [routerLink]="['/content',i]"><a >{{c}}</a></mat-card-title>
+    <mat-card-title [routerLink]="['/content',i]"><a>{{c}}</a></mat-card-title>
 </mat-card>
+<!-- ContentService -->
