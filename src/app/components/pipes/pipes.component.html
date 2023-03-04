@@ -13,7 +13,7 @@
 </div>
 
 
-<mat-card *ngFor="let p of posts | filter:search:searchField">
+<mat-card *ngFor="let p of posts | filterArrayObject:search:searchField">
     <h1>{{p.title}}</h1>
     <h3>{{p.text}}</h3>
 </mat-card>

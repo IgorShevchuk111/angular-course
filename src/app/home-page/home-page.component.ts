@@ -9,6 +9,8 @@ import { ContentService } from '../services/content.service';
 })
 export class HomePageComponent implements OnInit {
 
+  search: string = ''
+
   constructor(public contentService: ContentService) { }
 
   ngOnInit(): void {
