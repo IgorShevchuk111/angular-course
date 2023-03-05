@@ -45,8 +45,11 @@ export class FormsAndValidationComponent implements OnInit {
   getErrorMessagePassword() {
     if (this.form.get('password')?.hasError('required')) {
       return 'You must enter a password';
+    } else  if( this.form.get('password')?.hasError('minlength') ){
+      return `min length ${this.form.get('password')?.getError('minlength').requiredLength}, 
+      actualLength ${this.form.get('password')?.getError('minlength').actualLength}`
     }
-    return this.form.get('password')?.hasError('minlength') ? 'fdf' : '';
+    return null
   }
   // Choose Capital
   ChooseCapital() {
@@ -70,6 +73,7 @@ export class FormsAndValidationComponent implements OnInit {
   }
   // SUBMIT BUTTON
   submit() {
+    this.form.reset()
     console.log('submited', this.form);
   }
 }
