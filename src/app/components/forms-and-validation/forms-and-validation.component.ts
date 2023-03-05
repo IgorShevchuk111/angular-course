@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AsyncValidatorFn, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MyValidators } from 'src/app/my.validators';
 
 @Component({
@@ -20,8 +20,8 @@ export class FormsAndValidationComponent implements OnInit {
       email: new FormControl('', [
         Validators.required,
          Validators.email,
-         MyValidators.restrictedEmail
-        ]),
+         MyValidators.restrictedEmail,
+        ],<AsyncValidatorFn>MyValidators.uniqEmail),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
       address: new FormGroup({
         country: new FormControl('', [Validators.required]),
@@ -36,6 +36,8 @@ export class FormsAndValidationComponent implements OnInit {
       return 'You must enter a email';
     } else if (this.form.get('email')?.hasError('restrictedEmail')){
       return `This email ${this.form.get('email')?.value } restricted`;
+    }else if (this.form.get('email')?.hasError('uniqEmail')){
+      return `${this.form.get('email')?.value } This email is in use`;
     }
     return this.form.get('email')?.hasError('email') ? 'Not a valid email' : '';
   }
