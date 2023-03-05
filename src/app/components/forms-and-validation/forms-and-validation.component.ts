@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AsyncValidatorFn, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MyValidators } from 'src/app/my.validators';
 
 @Component({
@@ -21,7 +21,7 @@ export class FormsAndValidationComponent implements OnInit {
         Validators.required,
          Validators.email,
          MyValidators.restrictedEmail,
-        ],<AsyncValidatorFn>MyValidators.uniqEmail),
+        ]),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
       address: new FormGroup({
         country: new FormControl('', [Validators.required]),
@@ -73,7 +73,11 @@ export class FormsAndValidationComponent implements OnInit {
   }
   // SUBMIT BUTTON
   submit() {
-    this.form.reset()
+    // if (this.form.valid) {
+    //   console.log('submited', this.form);
+    // } 
     console.log('submited', this.form);
   }
+  
+
 }
