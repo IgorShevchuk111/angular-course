@@ -20,7 +20,7 @@ export class FormsAndValidationComponent implements OnInit {
       email: new FormControl('', [
         Validators.required,
          Validators.email,
-         MyValidators.restrictedEmails
+         MyValidators.restrictedEmail
         ]),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
       address: new FormGroup({
