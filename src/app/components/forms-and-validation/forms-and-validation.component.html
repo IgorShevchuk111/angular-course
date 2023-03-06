@@ -54,7 +54,7 @@
                 </mat-card>
             </div>
             <!-- SUBMIT BUTTON -->
-            <button mat-flat-button color="primary" type="submit"  [disabled]="form.invalid">Send Form</button>
+            <button mat-flat-button color="primary" type="submit"  [disabled]="form.invalid || form.pending">Send Form</button>
         </mat-card>
     </form>
 </mat-card>

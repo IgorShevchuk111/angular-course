@@ -21,6 +21,7 @@ export class MyValidators {
                         uniqEmail: true
                     })
                 }
+                resolve(null)
             }, 1000);
         })
     }

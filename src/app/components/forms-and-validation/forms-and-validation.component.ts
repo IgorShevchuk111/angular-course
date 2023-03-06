@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormArray, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { AsyncValidatorFn, FormArray, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { MyValidators } from 'src/app/my.validators';
 
 @Component({
@@ -23,7 +23,7 @@ export class FormsAndValidationComponent implements OnInit {
         Validators.required,
          Validators.email,
          MyValidators.restrictedEmail,
-        ]),
+        ],[<AsyncValidatorFn>MyValidators.uniqEmail]),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
       address: new FormGroup({
         country: new FormControl('', [Validators.required]),
@@ -77,6 +77,8 @@ export class FormsAndValidationComponent implements OnInit {
   submit():void {
     if (this.form.valid) {
       const valueForm = this.form.value
+      console.log('d',valueForm);
+      
       this.formDirective.resetForm()
     } 
   }
