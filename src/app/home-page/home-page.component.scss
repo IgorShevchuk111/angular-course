@@ -7,14 +7,14 @@
 mat-card {
     width: 80%;
     margin: 10px auto 10px;
+
+    &:hover{
+        background: #ededed;
+    }
 }
 
 mat-card-title {
     text-align: center;
-}
-
-mat-card:hover {
-    background: #ededed;
 }
 
 a {
@@ -37,7 +37,7 @@ input {
     border-radius: 0px 25px 25px 0px;
     border: 1px solid #1b1b1b;
     background: #ffffff;
-    outline: 0;
+    outline: none;
     margin: 0px;
     border-left: none;
     border-color: #A4A4A4;
