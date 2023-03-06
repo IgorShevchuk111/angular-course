@@ -8,7 +8,7 @@ import { MyValidators } from 'src/app/my.validators';
   styleUrls: ['./forms-and-validation.component.scss']
 })
 export class FormsAndValidationComponent implements OnInit {
-
+// reset material form
   @ViewChild(FormGroupDirective) formDirective: FormGroupDirective;
 
   // FORM {}
@@ -75,10 +75,9 @@ export class FormsAndValidationComponent implements OnInit {
   }
   // SUBMIT BUTTON
   submit():void {
-
     if (this.form.valid) {
-      console.log('submited', this.form);
-     this.formDirective.resetForm()
+      const valueForm = this.form.value
+      this.formDirective.resetForm()
     } 
   }
 }
