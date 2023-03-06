@@ -81,6 +81,4 @@ export class FormsAndValidationComponent implements OnInit {
      this.formDirective.resetForm()
     } 
   }
-  
-
 }

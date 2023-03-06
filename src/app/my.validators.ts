@@ -1,4 +1,5 @@
-import {  FormControl } from "@angular/forms";
+
+import { FormControl} from "@angular/forms";
 import { Observable } from "rxjs";
 
 export class MyValidators {
@@ -23,4 +24,5 @@ export class MyValidators {
             }, 1000);
         })
     }
+
 }
