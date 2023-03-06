@@ -27,6 +27,7 @@ import { DHideElementDirective } from './directive/d-hide-element.directive';
 import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 import { FilterArrayObjectPipe } from './pipes/filter-array-object.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
+import { HttpClientComponent } from './components/http-client/http-client.component';
 
 
 
@@ -55,6 +56,7 @@ import { FilterArrayPipe } from './pipes/filter-array.pipe';
     FilterArrayObjectPipe,
     FormsAndValidationComponent,
     FilterArrayPipe,
+    HttpClientComponent,
   ],
   imports: [
     BrowserModule,

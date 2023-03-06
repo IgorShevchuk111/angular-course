@@ -15,6 +15,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
 import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
+import { HttpClientComponent } from './components/http-client/http-client.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path:  'Post', component: PostComponent}
   ]},
   {path:  'FormsAndValidation', component: FormsAndValidationComponent},
+  {path:  'HttpClient', component: HttpClientComponent},
 ]
 
 @NgModule({

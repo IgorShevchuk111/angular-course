@@ -65,6 +65,9 @@ export class ContentTitleComponent implements OnInit {
       case 10: 
         this.mov = "FormsAndValidation";
       break;
+      case 11: 
+        this.mov = "HttpClient";
+      break;
 
       default:
         this.mov = "/";
