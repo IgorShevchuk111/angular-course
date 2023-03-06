@@ -1,5 +1,7 @@
+<button mat-flat-button color="primary" class="button-back"><a routerLink="/">Back</a></button>
+
 <mat-card>
-    <form [formGroup]="form" (ngSubmit)="submit()">
+    <form [formGroup]="form" #formDirective (ngSubmit)="submit()">
 
         <h1>Angular Form</h1>
         <!-- ANGULAR FORM -->
@@ -14,11 +16,11 @@
                 <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
                     {{getErrorMessageEmail()}}
                 </div>
- 
+                
                 <mat-form-field appearance="fill">
                     <mat-label>Enter your password</mat-label>
                     <input matInput placeholder="Enter password..." formControlName="password" required>
-                    <mat-error *ngIf="form.get('email')?.invalid && form.get('email')?.touched">{{getErrorMessagePassword()}}</mat-error>
+                    <mat-error *ngIf="form.get('password')?.invalid && form.get('password')?.touched">{{getErrorMessagePassword()}}</mat-error>
                 </mat-form-field>
             </div>
             <!-- ADDRESS GROUP -->
@@ -52,7 +54,7 @@
                 </mat-card>
             </div>
             <!-- SUBMIT BUTTON -->
-            <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">Send Form</button>
+            <button mat-flat-button color="primary" type="submit"  [disabled]="form.invalid">Send Form</button>
         </mat-card>
     </form>
 </mat-card>

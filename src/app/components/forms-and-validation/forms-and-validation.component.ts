@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormArray, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { MyValidators } from 'src/app/my.validators';
 
 @Component({
@@ -8,6 +8,8 @@ import { MyValidators } from 'src/app/my.validators';
   styleUrls: ['./forms-and-validation.component.scss']
 })
 export class FormsAndValidationComponent implements OnInit {
+
+  @ViewChild(FormGroupDirective) formDirective: FormGroupDirective;
 
   // FORM {}
   form: FormGroup
@@ -72,11 +74,12 @@ export class FormsAndValidationComponent implements OnInit {
     return (this.form.get('skills') as FormArray).controls;
   }
   // SUBMIT BUTTON
-  submit() {
-    // if (this.form.valid) {
-    //   console.log('submited', this.form);
-    // } 
-    console.log('submited', this.form);
+  submit():void {
+
+    if (this.form.valid) {
+      console.log('submited', this.form);
+     this.formDirective.resetForm()
+    } 
   }
   
 
