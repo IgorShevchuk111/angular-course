@@ -65,9 +65,6 @@ export class ContentTitleComponent implements OnInit {
       case 10: 
         this.mov = "FormsAndValidation";
       break;
-      case 11: 
-        this.mov = "SwitchNgModel";
-      break;
 
       default:
         this.mov = "/";

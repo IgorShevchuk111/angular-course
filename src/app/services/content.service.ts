@@ -11,8 +11,7 @@ export class ContentService {
 
    contents = [
     'Binding Img', 'Event binding','2 Way binnding','Directive ngStyle','Dynamic ngClass',
-    'Show an element using ngIf else','ngSwitch', 'ngFor','Pipes','Post Form','Forms and Validation',
-    'Create your own ngModel'
+    'Show an element using ngIf else','ngSwitch', 'ngFor','Pipes','Post Form','Forms and Validation'
   ]
 
   getTitleByi(i: number) {
