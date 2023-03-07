@@ -1,0 +1,20 @@
+.form-button{
+  margin-right: 30px;
+}
+.mat-form-field {
+    display: block; 
+}
+.card-content{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.delite{
+  background: red;
+  color: #ffffff;
+}
+span{
+  &.completed{
+    text-decoration: line-through;
+  }
+}
