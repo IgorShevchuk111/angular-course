@@ -18,7 +18,7 @@
         <span [class.completed]="todo.completed"><h1>{{todo.title}}</h1></span>
         <span>
             <button class="form-button delite" mat-flat-button (click)="removeTodo(todo.id)" >Delete</button>
-            <button mat-flat-button color="primary">Completed</button>
+            <button mat-flat-button color="primary" (click)="completeTodo(todo.id)">Completed</button>
         </span>
     </mat-card>
 </mat-card>
