@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { delay } from 'rxjs/operators';
 import { Todo, TodosService } from 'src/app/services/todos.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { Todo, TodosService } from 'src/app/services/todos.service';
 })
 export class HttpClientComponent implements OnInit {
 
+  loading = false
   todos: Todo[] = []
   title = ''
-  d = true
   constructor(
     private todosService: TodosService
   ) { }
@@ -20,9 +21,12 @@ export class HttpClientComponent implements OnInit {
   }
   // http get
   getTodos() {
+    this.loading = true
     this.todosService.fetchTodos()
+    .pipe(delay(1000))
       .subscribe(obs => {
         this.todos = obs
+        this.loading = false
       })
   }
   // http post
