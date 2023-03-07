@@ -8,7 +8,6 @@ import { Todo, TodosService } from 'src/app/services/todos.service';
 })
 export class HttpClientComponent implements OnInit {
 
-
   todos: Todo[] = []
   title = ''
 
@@ -28,15 +27,26 @@ export class HttpClientComponent implements OnInit {
     }
 // http post
 addTodo() {
-  const newTodo = {
-    title: this.title,
-    completed: false
+  if (!this.title.trim()) {
+    return
+  } else{
+    const newTodo = {
+      title: this.title,
+      completed: false,
+    }
+    this.todosService.addTodo(newTodo)
+    .subscribe(todo =>{
+      this.todos.unshift(todo)
+    })
+    this.title = ''
   }
-  this.todosService.addTodo(newTodo)
-  .subscribe(todo =>{
-    this.todos.unshift(todo)
-  })
-  this.title = ''
   }
+// http delete
+    removeTodo(id: number) {
+    this.todosService.removeTodo(id)
+    .subscribe(()  => {
+      this.todos = this.todos.filter( t => t.id !== id)
+    })
+      }
 
 }
