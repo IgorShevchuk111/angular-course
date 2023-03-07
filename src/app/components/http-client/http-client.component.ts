@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpClientComponent implements OnInit {
 
+  title = ''
+
   constructor() { }
 
   ngOnInit(): void {

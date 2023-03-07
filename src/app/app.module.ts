@@ -23,7 +23,7 @@ import { PostComponent } from './components/post/post.component';
 import { DStyleMouseDirective} from './directive/dStyleMouse.directive';
 import { DAddClassDirective } from './directive/d-add-class.directive';
 import { DHideElementDirective } from './directive/d-hide-element.directive';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 import { FilterArrayObjectPipe } from './pipes/filter-array-object.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
@@ -65,7 +65,8 @@ import { HttpClientComponent } from './components/http-client/http-client.compon
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
