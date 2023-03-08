@@ -5,3 +5,14 @@ mat-toolbar {
 .router-link-active {
     color: #afadad;
 }
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.active{
+    color: red;
+}

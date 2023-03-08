@@ -17,13 +17,14 @@ import { PostComponent } from './components/post/post.component';
 import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 import { HttpClientComponent } from './components/http-client/http-client.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'content/:i', component: ContentTitleComponent},
   {path:  'binding-img', component: BindingImgComponent},
-  {path:  'EventBinding', component: EventBindingComponent},
+  {path:  'EventBinding', component: EventBindingComponent, canActivate:[AuthGuardService]},
   {path:  'TwoWayBinding', component: TwoWayBindingComponent},
   {path:  'DirectiveNgStyle', component: DirectiveNgStyleComponent},
   {path:  'DynamicNgClass', component: DynamicNgClassComponent},
