@@ -28,6 +28,7 @@ import { FormsAndValidationComponent } from './components/forms-and-validation/f
 import { FilterArrayObjectPipe } from './pipes/filter-array-object.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { HttpClientComponent } from './components/http-client/http-client.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
 
@@ -57,6 +58,7 @@ import { HttpClientComponent } from './components/http-client/http-client.compon
     FormsAndValidationComponent,
     FilterArrayPipe,
     HttpClientComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

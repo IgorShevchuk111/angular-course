@@ -16,6 +16,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostComponent } from './components/post/post.component';
 import { FormsAndValidationComponent } from './components/forms-and-validation/forms-and-validation.component';
 import { HttpClientComponent } from './components/http-client/http-client.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,8 @@ const routes: Routes = [
   ]},
   {path:  'FormsAndValidation', component: FormsAndValidationComponent},
   {path:  'HttpClient', component: HttpClientComponent},
+  {path:  'Error', component: ErrorPageComponent},
+  {path:  '**',redirectTo: '/Error'},
 ]
 
 @NgModule({
