@@ -8,19 +8,19 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
 
-  isActive = false
+  // isActive = false
 
   constructor(
     private authService: AuthService
   ){}
-
+// loginn
   login() {
     this.authService.logIn(true)
   }
+  // loguot
   logout() {
     this.authService.logOut(false)
   }
-
 
   activateNavItem(itemId: string) {
     const navItems = document.querySelectorAll('span');
@@ -33,7 +33,6 @@ export class AppComponent {
     });
   }
 
-
   // navItems = [
   //   { name: 'Nav item 1', isActive: false },
   //   { name: 'Nav item 2', isActive: false },
@@ -45,6 +44,4 @@ export class AppComponent {
     
   //   this.navItems.forEach(item => item.isActive = (item === selectedItem));
   // }
-
- 
 }
