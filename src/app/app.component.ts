@@ -21,7 +21,7 @@ export class AppComponent {
   logout() {
     this.authService.logOut(false)
   }
-
+// active nav link (login,logout)
   activateNavItem(itemId: string) {
     const navItems = document.querySelectorAll('span');
     navItems.forEach(item => {
