@@ -3,8 +3,8 @@
     <span style="flex: 1 1 auto;"></span>
     <span class="nav-links">
         <span [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Home</span>
-        <span id="login" (click)="login();  activateNavItem()">Login</span>
-        <span id="logout" (click)="logout(); activateNavItem()">Logout</span>
+        <span class="login-logout" id="login" (click)="login();  activateNavItem()">Login</span>
+        <span class="login-logout" id="logout" (click)="logout(); activateNavItem()">Logout</span>
     </span>
 </mat-toolbar>
 

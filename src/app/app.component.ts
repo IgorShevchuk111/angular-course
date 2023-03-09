@@ -28,7 +28,7 @@ export class AppComponent  implements OnInit {
   }
 // active nav link  (login,logout)
   activateNavItem() {
-    const navItems = document.querySelectorAll('span');
+    const navItems = document.querySelectorAll('.login-logout');
     navItems.forEach(item => {
       if (item.id === this.user) {
         item.classList.add('active');
