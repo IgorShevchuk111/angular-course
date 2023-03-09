@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'content/:i', component: ContentTitleComponent},
   {path:  'binding-img', component: BindingImgComponent},
-  {path:  'EventBinding', component: EventBindingComponent},
+  {path:  'EventBinding', component: EventBindingComponent, canActivate:[AuthGuardService]},
   {path:  'TwoWayBinding', component: TwoWayBindingComponent},
   {path:  'DirectiveNgStyle', component: DirectiveNgStyleComponent},
   {path:  'DynamicNgClass', component: DynamicNgClassComponent},
