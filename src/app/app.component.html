@@ -3,13 +3,27 @@
     <span style="flex: 1 1 auto;"></span>
     <span class="nav-links">
         <span [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Home</span>
-        <span id="login" (click)="login();  activateNavItem('login')">Login</span>
-        <span id="logout" (click)="logout(); activateNavItem('logout')">Logout</span>
+        <span id="login" (click)="login();  activateNavItem()">Login</span>
+        <span id="logout" (click)="logout(); activateNavItem()">Logout</span>
     </span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
 
+
+<!--  active nav link 2 -->
   <!-- <ul>
     <li *ngFor="let item of navItems" [ngClass]="{ 'active': item.isActive }" (click)="activateNavItemm(item)">{{ item.name }}</li>
   </ul> -->
+
+
+
+
+   <!-- active nav link 3 -->
+  <!-- <div>
+    <button *ngFor="let item of navItems"
+            [class.active]="item === activeItem"
+            (click)="setActiveItem(item)">
+      {{ item.name }}
+    </button>
+  </div> -->
