@@ -8,7 +8,14 @@
     </span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div *ngIf="user !== 'logout'; else Login">
+  <router-outlet></router-outlet>
+</div>
+<ng-template #Login>
+  <h1 class="errorLogin">Please Login !</h1>
+</ng-template>
+
+
 
 
 <!--  active nav link 2 -->
