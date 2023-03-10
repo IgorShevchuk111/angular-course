@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
 import { Todo, TodosService } from 'src/app/services/todos.service';
+import {MatDialog} from '@angular/material/dialog';
+import { ModalDeletedComponent } from '../modal-deleted/modal-deleted.component';
 
 @Component({
   selector: 'app-http-client',
@@ -13,7 +15,8 @@ export class HttpClientComponent implements OnInit {
   todos: Todo[] = []
   title = ''
   constructor(
-    private todosService: TodosService
+    private todosService: TodosService,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -50,6 +53,7 @@ export class HttpClientComponent implements OnInit {
     this.todosService.removeTodo(id)
       .subscribe((s) => {
         this.todos = this.todos.filter(t => t.id !== id)
+        this.openModal()
       })
   }
   // http put
@@ -61,6 +65,20 @@ export class HttpClientComponent implements OnInit {
           this.todos[todoIndex].completed = true;
         }
       })
+  }
+// MatDialog window
+  openModal() {
+    const dialogRef = this.matDialog.open(ModalDeletedComponent, {
+      width: '200px',
+      position: {
+        top: '5%',
+        left: '80%'
+      }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      
+    });
   }
 
 }

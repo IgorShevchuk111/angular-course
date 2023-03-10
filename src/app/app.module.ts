@@ -29,6 +29,7 @@ import { FilterArrayObjectPipe } from './pipes/filter-array-object.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { HttpClientComponent } from './components/http-client/http-client.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ModalDeletedComponent } from './components/modal-deleted/modal-deleted.component';
 
 
 
@@ -59,6 +60,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     FilterArrayPipe,
     HttpClientComponent,
     ErrorPageComponent,
+    ModalDeletedComponent,
   ],
   imports: [
     BrowserModule,
