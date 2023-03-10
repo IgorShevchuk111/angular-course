@@ -30,7 +30,7 @@ import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { HttpClientComponent } from './components/http-client/http-client.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ModalDeletedComponent } from './components/modal-deleted/modal-deleted.component';
-import { AlertCreatedComponent } from './components/alert-created/alert-created.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 
@@ -62,7 +62,7 @@ import { AlertCreatedComponent } from './components/alert-created/alert-created.
     HttpClientComponent,
     ErrorPageComponent,
     ModalDeletedComponent,
-    AlertCreatedComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
