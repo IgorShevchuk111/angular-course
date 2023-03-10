@@ -87,10 +87,7 @@ export class HttpClientComponent implements OnInit {
       
     });
   }
-
-
-  
-
+// Snack-bar Material
   completedSnackBar() {
     this.snackBar.open('completed!', 'Close', {
       duration: 1000,
