@@ -10,7 +10,7 @@ import { ModalDeletedComponent } from '../modal-deleted/modal-deleted.component'
   styleUrls: ['./http-client.component.scss']
 })
 export class HttpClientComponent implements OnInit {
-
+  alertMessage = '';
   loading = false
   todos: Todo[] = []
   title = ''
@@ -44,8 +44,12 @@ export class HttpClientComponent implements OnInit {
       this.todosService.addTodo(newTodo)
         .subscribe(todo => {
           this.todos.unshift(todo)
-        })
-      this.title = ''
+          this.alertMessage = 'Past added !' 
+          this.title = '';
+        });
+        setTimeout(() => {
+          this.alertMessage = '';
+        }, 2000);
     }
   }
   // http delete
