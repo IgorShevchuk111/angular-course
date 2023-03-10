@@ -3,6 +3,7 @@ import { delay } from 'rxjs/operators';
 import { Todo, TodosService } from 'src/app/services/todos.service';
 import {MatDialog} from '@angular/material/dialog';
 import { ModalDeletedComponent } from '../modal-deleted/modal-deleted.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-http-client',
@@ -16,7 +17,8 @@ export class HttpClientComponent implements OnInit {
   title = ''
   constructor(
     private todosService: TodosService,
-    private matDialog: MatDialog
+    private matDialog: MatDialog,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -67,6 +69,7 @@ export class HttpClientComponent implements OnInit {
         const todoIndex = this.todos.findIndex(t => t.id === todo.id);
         if (todoIndex !== -1) {
           this.todos[todoIndex].completed = true;
+          this.completedSnackBar()
         }
       })
   }
@@ -82,6 +85,15 @@ export class HttpClientComponent implements OnInit {
   
     dialogRef.afterClosed().subscribe(result => {
       
+    });
+  }
+
+
+  
+
+  completedSnackBar() {
+    this.snackBar.open('completed!', 'Close', {
+      duration: 1000,
     });
   }
 
